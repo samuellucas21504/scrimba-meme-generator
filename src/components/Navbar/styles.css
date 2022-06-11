@@ -1,0 +1,32 @@
+.navbar {
+    color: #FFF;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.navbar--title {
+    display: flex;
+    align-items: center;
+}
+
+.navbar--title > img {
+    max-width: 40px;
+    max-height: 30px;
+    margin-right: 7px;
+}
+
+.navbar--logo_text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20.7482px;
+    line-height: 24px;
+    align-self: flex-end;
+}
+
+.navbar--subtitle {
+    margin-left: auto;
+}
