@@ -1,0 +1,14 @@
+.footer {
+    color: #FFF;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    display: flex;
+    align-self: flex-end;
+    margin-top: auto;
+    width: 100%;
+    height: 10%;
+}
+
+.footer--main_text {
+    align-self: center;
+    margin: auto;
+}

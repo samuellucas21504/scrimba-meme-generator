@@ -2,24 +2,28 @@
     display: flex;
     align-items: center;
     flex-flow: column;
+    width: 100%;
 }
 
+.form--top_wrapper {
+    width: 75%;
+}
 .form--input_wrapper {
     display: flex;
     align-self: center;
-    gap: 5%;
     margin: auto;
+    gap: 5%;
 }
 
 .form--input {
     text-indent: 5px;
     border: 1px solid #D5D4D8;
+    width: 90%;
 }
 
 .form--input, .form--submit{
     border-radius: 5px;
-    width: 200px;
-    height: 35px;
+    height: 32px;
 }
 
 .form--submit {
@@ -34,4 +38,5 @@
     color: #FFFFFF;
     width: 100%;
     cursor: pointer;
+    margin-bottom: 20px;
 }

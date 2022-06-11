@@ -1,0 +1,11 @@
+.meme {
+    display: flex;
+    width: 100%;
+    margin: 2% 2%;
+    align-items: center;
+}
+
+.meme > img {
+    max-width: 90%;
+    margin: auto;
+}

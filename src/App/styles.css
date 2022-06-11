@@ -5,3 +5,9 @@
     margin: 0;
     font-family: 'Karla', sans-serif;
 }
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
