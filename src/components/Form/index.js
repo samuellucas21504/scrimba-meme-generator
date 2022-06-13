@@ -5,16 +5,26 @@ import Meme from "./Meme";
 
 export default function Form() {
 
-    function getMemeImage() {
-        const memesArray = memesData.data.memes;
-        const randomMeme = memesArray[Math.floor(Math.random() * memesArray.length)];
-        return <Meme {...randomMeme} />;
+    const [allMemesImage, setAllMemesImage] = useState(memesData);
+    const [memeImage, setMemeImage] = useState(
+        {
+            topText: "",
+            bottomText: "",
+            url: getRandomURL()
+        });
+
+    function getRandomURL() {
+        const memesArray = allMemesImage.data.memes;
+        const randomIndex = Math.floor(Math.random() * memesArray.length);
+        const randomMemeURL = memesArray[randomIndex].url;
+        return randomMemeURL;
     }
 
-    const [meme, setMeme] = useState(getMemeImage);
-
     function handleOnClick() {
-        setMeme(getMemeImage);
+        setMemeImage(prevMeme => ({
+            ...prevMeme,
+            url: getRandomURL()
+        }))
     }
 
     return (
@@ -26,7 +36,7 @@ export default function Form() {
                 </div>
                 <button className="form--submit" onClick={handleOnClick}>Get a new meme image</button>
             </div>
-            {meme}
+            <Meme {...memeImage} />
         </div>
     )
 }
