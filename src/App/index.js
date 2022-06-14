@@ -5,11 +5,11 @@ import Form from "../components/Form";
 import Footer from "../components/Footer";
 
 export default function App() {
-    return (
-        <div className="app">
-            <Navbar />
-            <Form />
-            <Footer />
-        </div>
-    )
+	return (
+		<div className="app">
+			<Navbar />
+			<Form />
+			<Footer />
+		</div>
+	);
 }
