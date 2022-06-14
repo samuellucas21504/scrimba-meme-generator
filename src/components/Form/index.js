@@ -3,12 +3,14 @@ import "./styles.css";
 import Meme from "./Meme";
 
 export default function Form() {
-	const [allMemesImage, setAllMemesImage] = useState();
+	const [allMemes, setAllMemes] = useState([]);
+
 	useEffect(() => {
 		fetch("https://api.imgflip.com/get_memes")
 			.then((res) => res.json())
-			.then((data) => setAllMemesImage(data));
+			.then((jsonData) => setAllMemes(jsonData.data.memes));
 	}, []);
+
 	const [memeImage, setMemeImage] = useState({
 		topText: "",
 		bottomText: "",
@@ -16,7 +18,7 @@ export default function Form() {
 	});
 
 	function getRandomURL() {
-		const memesArray = allMemesImage.data.memes;
+		const memesArray = allMemes;
 		const randomIndex = Math.floor(Math.random() * memesArray.length);
 		const randomMemeURL = memesArray[randomIndex].url;
 		return randomMemeURL;
